@@ -11,4 +11,5 @@ clamp(X, _Low, _High, X).
 to_byte(X, Gamma, R) :-
 	E is 1.0 / Gamma, 
 	T is 255.0 * (X**E),
-	clamp(T, 0.0, 255.0, R).
+	clamp(T, 0.0, 255.0, R0),
+	R is truncate(R0).
