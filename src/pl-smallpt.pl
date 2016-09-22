@@ -155,7 +155,7 @@ main() :-
 	get_scene(Scene),
 	current_prolog_flag(argv, Argv),
 	get_samples(Argv, Smax),
-	loop_main(Scene, Camera, Width, Height, Smax, Ls),
+	loop_main(Scene, Camera, Height, Width, Smax, Ls),
 	write_ppm(Width, Height, Ls).
 
 get_samples([], 1).
