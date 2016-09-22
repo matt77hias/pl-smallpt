@@ -225,7 +225,6 @@ do_s(Scene, [Eye, Cx, Cy, Gaze], Y, Height, X, Width, Sy, Sx, Smax, L, NL) :-
 	;
 		Dx is 1.0 - sqrt(2.0 - U1)
 	),
-	Coefx is (((Sx + 0.5 + Dx) / 2.0 + X) / Width - 0.5),
 	uniform_float(R2),
 	U2 is 2.0 * R2,
 	(
