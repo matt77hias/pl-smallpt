@@ -40,7 +40,7 @@ intersect_scene([], _Ray, CTmax, CSphere, Hit, HTmax, HSphere) :-
 	->
 		(Hit = true, HTmax = CTmax, HSphere = CSphere)
 	;
-		(Hit = fale, HTmax = none, HSphere = none)
+		(Hit = false, HTmax = none, HSphere = none)
 	).
 intersect_scene([Head|Tail], [Origin, Direction, Tmin, Tmax, Depth], CTmax, CSphere, Hit, HTmax, HSphere) :-
 	intersect_sphere(Head, [Origin, Direction, Tmin, Tmax, Depth], SHit, Smax),
