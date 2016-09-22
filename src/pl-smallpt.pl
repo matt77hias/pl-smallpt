@@ -207,7 +207,6 @@ loop_sx(Scene, Camera, Y, Height, X, Width, Sy, Sx, 2, Smax, Ls0, Ls2) :-
 	mul_v3(L1, 0.25, L2),
 	Index is (Height - 1 - Y) * Width + X,
 	list_add_v3(Ls0, Index, L2, Ls1),
-	Ls1 = Ls0,
 	NSx is Sx + 1,
 	loop_sx(Scene, Camera, Y, Height, X, Width, Sy, NSx, 2, Smax, Ls1, Ls2).
 loop_s(_Scene, _Camera, _Y, _Height, _X, _Width, _Sy, _Sx, Smax, Smax, L, L).
