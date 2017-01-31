@@ -149,8 +149,8 @@ radiance(Scene, [Origin, Direction, Tmin, Tmax, Depth], L) :-
 
 main() :-
 	seed_rng(),
-	Width is 2, %1024,
-	Height is 2, %768,
+	Width is 1024,
+	Height is 768,
 	get_camera(Width, Height, Camera),
 	get_scene(Scene),
 	current_prolog_flag(argv, Argv),
